@@ -1,0 +1,9 @@
+a{
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+}
+li{
+    list-style: none;
+    margin-left: 10%;
+}
