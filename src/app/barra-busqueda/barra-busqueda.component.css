@@ -1,0 +1,19 @@
+.list-group {
+    list-style: none;
+    padding: 0;
+  }
+  
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-group-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.text-with-icon {
+  margin-right: 1rem;
+}

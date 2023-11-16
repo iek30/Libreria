@@ -1,0 +1,25 @@
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+contenedor-hijo{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+    padding: 3%;
+}

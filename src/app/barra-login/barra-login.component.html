@@ -8,9 +8,16 @@
             Librería Angular
         </li>
         <li>
-            <button class="btn btn-dark" (click)="cambiarVisibilidadComponentes()">
+          <div *ngIf="!getVisibilidad()">
+            <button class="btn btn-dark" (click)="emitirDato()">
                 Inicia sesión
             </button>
+          </div>
+          <div *ngIf="getVisibilidad()">
+            <button class="btn btn-danger" (click)="emitirDato()">
+                Cerrar sesión
+            </button>
+          </div>
         </li>
       </a>
     </div>

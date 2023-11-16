@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ContenedorPadreComponent {
 
+  private mostrar:Boolean = false;
+
+  cambiarEstado(estado:any){
+    this.mostrar = estado;
+  }
+
+  getEstado(){
+    return this.mostrar;
+  }
+
 }

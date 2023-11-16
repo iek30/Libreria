@@ -1,1 +1,16 @@
-<barra-login></barra-login>
+<barra-login (visualizarEmitido)="cambiarEstado($event)"></barra-login>
+<div *ngIf="getEstado()">
+    <contenedor-hijo></contenedor-hijo>
+</div>
+<div *ngIf="!getEstado()" class="contenedor-imagen">
+    <div class="container m-5">
+        <img src="../../assets/imagen_no_inicio.png">
+    </div>
+</div>
+
+<footer class="fixed-footer text-center text-lg-start bg-white text-muted">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      API que he usado:
+      <a class="text-reset fw-bold" href="https://openlibra.com/es/page/public-api">OpenLibra API</a>
+    </div>
+</footer>

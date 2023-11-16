@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'barra-login',
@@ -7,15 +7,24 @@ import { Component } from '@angular/core';
 })
 export class BarraLoginComponent {
 
-  habilitarComponentes: Boolean;
+  private habilitarComponentes: Boolean;
+  @Output() visualizarEmitido = new EventEmitter<Boolean>();
 
   constructor(){
     this.habilitarComponentes = false;
+  }
+
+  getVisibilidad(){
+    return this.habilitarComponentes;
   }
 
   cambiarVisibilidadComponentes(){
     this.habilitarComponentes = !this.habilitarComponentes;
     return this.habilitarComponentes;
   }
+
+  emitirDato() {
+    this.visualizarEmitido.emit(this.cambiarVisibilidadComponentes());
+  } 
 
 }

@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContenedorPadreComponent } from './contenedor-padre/contenedor-padre.component';
 import { BarraLoginComponent } from './barra-login/barra-login.component';
+import { ContenedorHijoComponent } from './contenedor-hijo/contenedor-hijo.component';
+import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
+import { ContenedorLibrosComponent } from './contenedor-libros/contenedor-libros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContenedorPadreComponent,
-    BarraLoginComponent
+    BarraLoginComponent,
+    ContenedorHijoComponent,
+    BarraBusquedaComponent,
+    ContenedorLibrosComponent
   ],
   imports: [
     BrowserModule,
