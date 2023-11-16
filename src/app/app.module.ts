@@ -8,6 +8,8 @@ import { BarraLoginComponent } from './barra-login/barra-login.component';
 import { ContenedorHijoComponent } from './contenedor-hijo/contenedor-hijo.component';
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
 import { ContenedorLibrosComponent } from './contenedor-libros/contenedor-libros.component';
+import { ServicioService } from './servicio.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,9 @@ import { ContenedorLibrosComponent } from './contenedor-libros/contenedor-libros
   imports: [
     BrowserModule,
     AppRoutingModule
+    
   ],
-  providers: [],
+  providers: [ServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

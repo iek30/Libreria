@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../servicio.service';
 
 @Component({
@@ -6,16 +6,19 @@ import { ServicioService } from '../servicio.service';
   templateUrl: './contenedor-libros.component.html',
   styleUrls: ['./contenedor-libros.component.css']
 })
-export class ContenedorLibrosComponent {
+export class ContenedorLibrosComponent implements OnInit{
 
-  libros: any[] = [];
+  catalogo?: any[];
 
   constructor(private servicio: ServicioService) { }
 
   ngOnInit(): void {
-    this.servicio.getLibros().subscribe(libros => {
-      this.libros = libros;
+    this.catalogo = this.servicio.getLibros();
+
+    this.servicio.getLibros$().subscribe(updatedLibros => {
+      this.catalogo = updatedLibros;
     });
+
   }
 
 }
