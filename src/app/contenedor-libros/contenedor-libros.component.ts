@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../servicio.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'contenedor-libros',
@@ -9,16 +10,14 @@ import { ServicioService } from '../servicio.service';
 export class ContenedorLibrosComponent implements OnInit{
 
   catalogo?: any[];
+  suscripcion!: Subscription;
 
-  constructor(private servicio: ServicioService) { }
+  constructor(private servicio: ServicioService) { 
+    this.catalogo = this.servicio.getListaInicial();
+  }
 
   ngOnInit(): void {
-    this.catalogo = this.servicio.getLibros();
-
-    this.servicio.getLibros$().subscribe(updatedLibros => {
-      this.catalogo = updatedLibros;
-    });
-
+    this.suscripcion = this.servicio.getLibros$().subscribe(updatedLibros => { this.catalogo = updatedLibros;});
   }
 
 }

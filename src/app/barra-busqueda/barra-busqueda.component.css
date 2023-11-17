@@ -4,14 +4,7 @@
   }
   
 .list-group-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.list-group-item:hover {
-    font-weight: bold;
-    cursor: pointer;
+  padding: 30px;
 }
   
 .text-with-icon {

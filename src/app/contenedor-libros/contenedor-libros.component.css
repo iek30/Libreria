@@ -1,5 +1,6 @@
 .container{
-    height: 400px;
+    height: 650px;
     border-radius: 15px;
     overflow: auto;
+    padding: 7%;
 }
